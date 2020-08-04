@@ -1,0 +1,31 @@
+﻿@model MenuItemViewModel[]
+
+
+
+<div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+    <div class="btn-group dropleft">
+        <button type="button" class="btn btn-group dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="dropdown-menu">
+            @foreach (var item in Model)
+            {
+                if (item.IsEmpty)
+                {
+                    <p class="dropdown-item"></p>
+                }
+                else if (item.IsDivider)
+                {
+                    <div class="dropdown-divider"></div>
+                }
+                else
+                {
+                    <a class="dropdown-item" href="@item.Link"><span>@item.ImageIcon</span> @item.NameLink</a>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+
+
