@@ -1,0 +1,36 @@
+﻿@model IEnumerable<RowCheckboxViewModel>
+@{
+    ViewData["Title"] = "CheckBoxShow";
+}
+
+<div class="text-center">
+    <input type="checkbox" name="checkbox" id="checkAll" value="value">
+    <label for="checkAll" >Выбрать все</label>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Скачать</th>
+                <th>Удалить</th>
+                <th>Изменить</th>
+                <th>Создать</th>
+                <th>Чтение</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" name="chbox" @(item.Download ? "checked" : "") /></td>
+                    <td><input type="checkbox" name="chbox" @(item.Delete ? "checked" : "") /></td>
+                    <td><input type="checkbox" name="chbox" @(item.Edit ? "checked" : "") /></td>
+                    <td><input type="checkbox" name="chbox" @(item.Create ? "checked" : "") /></td>
+                    <td><input type="checkbox" name="chbox" @(item.Read ? "checked" : "") /></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script src="~/js/CheckboxElement/jsChecked.js"></script>
