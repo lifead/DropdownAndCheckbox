@@ -7,20 +7,20 @@
         <button type="button" class="btn btn-group dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu ddm-bg">
             @foreach (var item in Model)
             {
                 if (item.IsEmpty)
                 {
-                    <p class="dropdown-item"></p>
+                    <p class="ddm-empty"></p>
                 }
                 else if (item.IsDivider)
                 {
-                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider ddm-divider"></div>
                 }
                 else
                 {
-                    <a class="dropdown-item" href="@item.Link"><span>@item.ImageIcon</span> @item.NameLink</a>
+                    <a class="dropdown-item ddm-link-item " href="@item.Link"><span>@item.ImageIcon</span> @item.NameLink</a>
                 }
             }
         </div>

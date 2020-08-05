@@ -1,0 +1,20 @@
+﻿.ddm-bg {
+    background: linear-gradient(90deg, #000, #353535);
+}
+
+.ddm-link-item {
+    color: #B4B4B4;
+    font-weight: bold;
+}
+
+.ddm-divider {
+    border-color: #B4B4B4;
+}
+
+.ddm-empty {
+    height: 1.343rem;
+}
+
+.mm-empty-element {
+
+}
